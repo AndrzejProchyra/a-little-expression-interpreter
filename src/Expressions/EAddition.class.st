@@ -21,6 +21,12 @@ EAddition >> left: anExpression [
 	left := anExpression
 ]
 
+{ #category : 'arithmetic' }
+EAddition >> negated [
+
+	^ ENegation new expression: self
+]
+
 { #category : 'accessing' }
 EAddition >> right: anExpression [
 
