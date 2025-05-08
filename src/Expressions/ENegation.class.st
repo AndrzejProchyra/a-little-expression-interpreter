@@ -8,6 +8,12 @@ Class {
 	#package : 'Expressions'
 }
 
+{ #category : 'instance creation' }
+ENegation class >> expression: anExpression [
+
+	^ self new expression: anExpression
+]
+
 { #category : 'public access' }
 ENegation >> evaluate [
 
