@@ -1,0 +1,28 @@
+Class {
+	#name : 'EAddition',
+	#superclass : 'Object',
+	#instVars : [
+		'left',
+		'right'
+	],
+	#category : 'Expressions',
+	#package : 'Expressions'
+}
+
+{ #category : 'public access' }
+EAddition >> evaluate [
+
+	^ left evaluate + right evaluate
+]
+
+{ #category : 'accessing' }
+EAddition >> left: anExpression [
+
+	left := anExpression
+]
+
+{ #category : 'accessing' }
+EAddition >> right: anExpression [
+
+	right := anExpression
+]
