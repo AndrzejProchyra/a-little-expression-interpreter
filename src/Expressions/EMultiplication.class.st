@@ -9,6 +9,13 @@ Class {
 	#package : 'Expressions'
 }
 
+{ #category : 'as yet unclassified' }
+EMultiplication class >> fiveTimesThree [
+
+	<sampleInstance>
+	^ self left: EConstant constant5 right: EConstant constant3
+]
+
 { #category : 'instance creation' }
 EMultiplication class >> left: leftExpression right: rightExpression [
 
@@ -28,6 +35,17 @@ EMultiplication >> evaluate [
 EMultiplication >> left: anExpression [
 
 	left := anExpression
+]
+
+{ #category : 'printing' }
+EMultiplication >> printOn: aStream [
+
+	aStream
+		nextPut: $(;
+		print: left;
+		nextPutAll: ' * ';
+		print: right;
+		nextPut: $)
 ]
 
 { #category : 'accessing' }
