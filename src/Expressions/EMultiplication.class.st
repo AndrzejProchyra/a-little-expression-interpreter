@@ -9,6 +9,15 @@ Class {
 	#package : 'Expressions'
 }
 
+{ #category : 'instance creation' }
+EMultiplication class >> left: leftExpression right: rightExpression [
+
+	^ self new
+		  left: leftExpression;
+		  right: rightExpression;
+		  yourself
+]
+
 { #category : 'public access' }
 EMultiplication >> evaluate [
 
