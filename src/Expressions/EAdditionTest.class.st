@@ -1,18 +1,18 @@
 Class {
-	#name : 'EAddionTest',
+	#name : 'EAdditionTest',
 	#superclass : 'TestCase',
 	#category : 'Expressions',
 	#package : 'Expressions'
 }
 
 { #category : 'tests' }
-EAddionTest >> testEvaluate [
+EAdditionTest >> testEvaluate [
 
 	self assert: EAddition fivePlusThree evaluate equals: 8
 ]
 
 { #category : 'tests' }
-EAddionTest >> testEvaluateWithNegation [
+EAdditionTest >> testEvaluateWithNegation [
 
 	| ep1 ep2 |
 	ep1 := ENegation expression: EConstant constant5.
@@ -25,7 +25,7 @@ EAddionTest >> testEvaluateWithNegation [
 ]
 
 { #category : 'tests' }
-EAddionTest >> testNegated [
+EAdditionTest >> testNegated [
 
 	| ep1 ep2 |
 	ep1 := EConstant constant5.
@@ -38,7 +38,7 @@ EAddionTest >> testNegated [
 ]
 
 { #category : 'tests' }
-EAddionTest >> testPrinting [
+EAdditionTest >> testPrinting [
 
 	self assert: EAddition fivePlusThree printString equals: '(5 + 3)'.
 	self
