@@ -27,13 +27,8 @@ EMultiplication >> evaluate [
 	^ left evaluate * right evaluate
 ]
 
-{ #category : 'printing' }
-EMultiplication >> printOn: aStream [
+{ #category : 'as yet unclassified' }
+EMultiplication >> operatorString [
 
-	aStream
-		nextPut: $(;
-		print: left;
-		nextPutAll: ' * ';
-		print: right;
-		nextPut: $)
+	^ ' * '
 ]

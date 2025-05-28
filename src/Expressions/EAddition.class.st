@@ -23,13 +23,8 @@ EAddition >> evaluate [
 	^ left evaluate + right evaluate
 ]
 
-{ #category : 'printing' }
-EAddition >> printOn: aStream [
+{ #category : 'as yet unclassified' }
+EAddition >> operatorString [
 
-	aStream
-		nextPut: $(;
-		print: left;
-		nextPutAll: ' + ';
-		print: right;
-		nextPut: $)
+	^ ' + '
 ]
