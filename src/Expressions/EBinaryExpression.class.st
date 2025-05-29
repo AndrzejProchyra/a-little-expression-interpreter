@@ -9,6 +9,17 @@ Class {
 	#package : 'Expressions'
 }
 
+{ #category : 'testing' }
+EBinaryExpression class >> isAbstract [
+
+	^ self == EBinaryExpression
+]
+
+{ #category : 'as yet unclassified' }
+EBinaryExpression >> evaluate [
+	^ self subclassResponsibility
+]
+
 { #category : 'accessing' }
 EBinaryExpression >> left: anExpression [
 
@@ -17,8 +28,7 @@ EBinaryExpression >> left: anExpression [
 
 { #category : 'as yet unclassified' }
 EBinaryExpression >> operatorString [
-
-	self subclassResponsibility
+	^ self subclassResponsibility
 ]
 
 { #category : 'printing' }
