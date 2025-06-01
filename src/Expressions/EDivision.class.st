@@ -5,6 +5,16 @@ Class {
 	#package : 'Expressions'
 }
 
+{ #category : 'instance creation' }
+EDivision class >> left: anExpression right: anotherExpression [
+	"create an instance"
+
+	^ self new
+		  left: anExpression;
+		  right: anotherExpression;
+		  yourself
+]
+
 { #category : 'accessing' }
 EDivision >> evaluate [
 
