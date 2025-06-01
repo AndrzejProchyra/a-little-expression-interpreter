@@ -18,9 +18,10 @@ EAddition class >> fivePlusThree [
 ]
 
 { #category : 'public access' }
-EAddition >> evaluate [
+EAddition >> evaluateWith: aBindingDictionary [
 
-	^ left evaluate + right evaluate
+	^ (left evaluateWith: aBindingDictionary)
+	  + (right evaluateWith: aBindingDictionary)
 ]
 
 { #category : 'as yet unclassified' }

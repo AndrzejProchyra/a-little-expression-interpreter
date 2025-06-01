@@ -8,7 +8,9 @@ Class {
 { #category : 'tests' }
 EAdditionTest >> testEvaluate [
 
-	self assert: EAddition fivePlusThree evaluate equals: 8
+	self
+		assert: (EAddition fivePlusThree evaluateWith: Dictionary new)
+		equals: 8
 ]
 
 { #category : 'tests' }
@@ -18,9 +20,9 @@ EAdditionTest >> testEvaluateWithNegation [
 	ep1 := ENegation expression: EConstant constant5.
 	ep2 := EConstant constant3.
 	self
-		assert: (EAddition new
-				 right: ep1;
-				 left: ep2) evaluate
+		assert: ((EAddition new
+				  right: ep1;
+				  left: ep2) evaluateWith: Dictionary new)
 		equals: -2
 ]
 
@@ -31,9 +33,9 @@ EAdditionTest >> testNegated [
 	ep1 := EConstant constant5.
 	ep2 := EConstant constant3.
 	self
-		assert: (EAddition new
-				 right: ep1;
-				 left: ep2) negated evaluate
+		assert: ((EAddition new
+				  right: ep1;
+				  left: ep2) negated evaluateWith: Dictionary new)
 		equals: -8
 ]
 

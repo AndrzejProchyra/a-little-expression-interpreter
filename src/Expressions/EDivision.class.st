@@ -16,9 +16,10 @@ EDivision class >> left: anExpression right: anotherExpression [
 ]
 
 { #category : 'accessing' }
-EDivision >> evaluate [
+EDivision >> evaluateWith: aBindingDictionary [
 
-	^ left evaluate / right evaluate
+	^ (left evaluateWith: aBindingDictionary)
+	  / (right evaluateWith: aBindingDictionary)
 ]
 
 { #category : 'accessing' }

@@ -10,8 +10,8 @@ EPowerTest >> testEvaluate [
 
 	self
 		assert:
-			(EPower base: EConstant constant5 exponent: EConstant constant3)
-				evaluate
+			((EPower base: EConstant constant5 exponent: EConstant constant3)
+				 evaluateWith: nil)
 		equals: 125
 ]
 

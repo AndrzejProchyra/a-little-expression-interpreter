@@ -15,14 +15,15 @@ EPower class >> base: anExpression exponent: anExpression2 [
 ]
 
 { #category : 'public access' }
-EPower class >> evaluate [
+EPower class >> evaluateWith: aBindingDictionary [
 	self shouldBeImplemented.
 ]
 
 { #category : 'initialization' }
-EPower >> evaluate [
+EPower >> evaluateWith: aBindingDictionary [
 
-	^ left evaluate raisedTo: right evaluate
+	^ (left evaluateWith: aBindingDictionary) raisedTo:
+		  (right evaluateWith: aBindingDictionary)
 ]
 
 { #category : 'as yet unclassified' }

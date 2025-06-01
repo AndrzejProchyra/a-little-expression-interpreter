@@ -16,7 +16,7 @@ EBinaryExpression class >> isAbstract [
 ]
 
 { #category : 'as yet unclassified' }
-EBinaryExpression >> evaluate [
+EBinaryExpression >> evaluateWith: aBindingDictionary [
 	^ self subclassResponsibility
 ]
 
@@ -28,6 +28,7 @@ EBinaryExpression >> left: anExpression [
 
 { #category : 'as yet unclassified' }
 EBinaryExpression >> operatorString [
+
 	^ self subclassResponsibility
 ]
 

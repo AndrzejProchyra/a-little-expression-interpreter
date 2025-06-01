@@ -22,9 +22,10 @@ EMultiplication class >> left: leftExpression right: rightExpression [
 ]
 
 { #category : 'public access' }
-EMultiplication >> evaluate [
+EMultiplication >> evaluateWith: aBindingDictionary [
 
-	^ left evaluate * right evaluate
+	^ (left evaluateWith: aBindingDictionary)
+	  * (right evaluateWith: aBindingDictionary)
 ]
 
 { #category : 'as yet unclassified' }

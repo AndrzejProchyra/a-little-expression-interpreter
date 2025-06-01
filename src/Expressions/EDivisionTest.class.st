@@ -10,8 +10,8 @@ EDivisionTest >> testEvaluate [
 
 	self
 		assert:
-			(EDivision left: EConstant constant5 right: EConstant constant3)
-				evaluate
+			((EDivision left: EConstant constant5 right: EConstant constant3)
+				 evaluateWith: Dictionary new)
 		equals: 5 / 3
 ]
 
